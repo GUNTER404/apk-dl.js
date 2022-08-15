@@ -2,7 +2,7 @@
   it's my frist nodejs mudole
   APK DOWNLOADER API MODULE
   2022-08-12
-  @GUNTER404
+  @GUNTER404/apk-dl
 */
 import fetch from 'node-fetch'
 import cheerio from 'cheerio'
@@ -14,15 +14,15 @@ let apkcombo = {
     res = (await res.text())
     let $ = cheerio.load(res)
     let link = []
-    let nama = []
+    let name = []
     $('div.content-apps > a').each(function(a, b) {
       let nem = $(b).attr('title')
-      nama.push(nem)
+      name.push(nem)
       link.push($(b).attr('href').replace('https://apkcombo-com.translate.goog/', 'https://apkcombo.com/').replace('/?_x_tr_sl=en&_x_tr_tl=fr&_x_tr_hl=en&_x_tr_pto=wapp', ''))
     })
     return {
       link,
-      nama
+      name
     }
   },
   download: async function(url) {
@@ -46,7 +46,7 @@ let apkcombo = {
   }
 }
 
-let apk_dl = {
+let apkdl = {
   search: async function(args) {
     let res = (await fetch(tools.Proxy(tools.api(2, '/search', {
       q: args
@@ -56,11 +56,11 @@ let apk_dl = {
     let $ = cheerio.load(res)
 
     let link = []
-    let nama = []
+    let name = []
     $('a.title').each(function(a, b) {
       let nem = $(b).text()
-      nama.push(nem)
-      link.push($(b).attr('href'))
+      name.push(nem)
+      link.push($(b).attr('href').replace('https://apk--dl-com.translate.goog/','https://apk-dl.com/').replace('?_x_tr_sl=en&_x_tr_tl=fr&_x_tr_hl=en&_x_tr_pto=wapp',''))
     })
     return {
       link,
@@ -104,7 +104,7 @@ let aptoide = {
     res = (await res.json())
     ress = res.datalist.list.map(v => {
       return {
-        nama: v.name,
+        name: v.name,
         id: v.package
       }
     })
@@ -125,3 +125,6 @@ let aptoide = {
     }
   }
 }
+
+let apk_dl = {apkdl,apkcombo,aptoide}
+export default apk_dl
