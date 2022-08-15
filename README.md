@@ -18,7 +18,7 @@ npm uninstall apk-dl
 ```
 # how to use
 
-### import
+## import
 #### whit js core
 ```js
 const apk-dl = require('apk-dl');
