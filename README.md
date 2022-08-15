@@ -16,7 +16,7 @@ npm install apk-dl
 ```sh
 npm uninstall apk-dl
 ```
-### how to use
+# how to use
 
 #### import
 #### whit js core
