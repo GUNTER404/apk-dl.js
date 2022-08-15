@@ -112,4 +112,3 @@ let aptoide = {
       return {img:res.datalist.list[0].icon ,developer:res.datalist.list[0].store.name ,appname:res.datalist.list[0].name ,link:res.datalist.list[0].file.path}
   }
 }
-console.log(await aptoide.download('com.whatsapp'))
