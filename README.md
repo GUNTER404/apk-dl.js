@@ -16,3 +16,15 @@ npm install apk-dl
 ```sh
 npm uninstall apk-dl
 ```
+# how to use
+
+## import
+### whit js core
+```js
+const apk-dl = require('apk-dl');
+```
+
+### whit ES6 
+```js
+import apk-dl from 'apk-dl'
+```
