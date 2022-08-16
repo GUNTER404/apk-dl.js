@@ -1,15 +1,26 @@
 {
   "name": "apk-dl",
-  "version": "1.2.1",
+  "version": "6.6.6",
   "description": "this mudule make to download apps from:\n apk-dl.com\n aptoide.com\n apkcombo.com\n play.google.com",
-  "type": "module",
-  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/GUNTER404/apk-dl.git"
+  },
+  "homepage": "https://github.com/GUNTER404/apk-dl#readme",
+  "main": "lib/index.js",
+  "module": "lib/esm/index.js",
+  "exports": {
+    ".": {
+      "require": "./lib/index.js",
+      "import": "./lib/esm/index.js"
+    },
+    "./lib/config": {
+      "require": "./lib/config.js",
+      "import": "./lib/esm/config.js"
+    }
   },
   "keywords": [
     "apk",
@@ -20,7 +31,6 @@
   "bugs": {
     "url": "https://github.com/GUNTER404/apk-dl/issues"
   },
-  "homepage": "https://github.com/GUNTER404/apk-dl#readme",
   "dependencies": {
     "@types/node": "^18.0.6",
     "cheerio": "^1.0.0-rc.12",
