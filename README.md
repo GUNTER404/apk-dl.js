@@ -56,6 +56,6 @@ await apk_dl.aptoide.search('minecraft')
 await apk_dl.aptoide.search("app name package")
 ```
 #### comming soon
- google.play.com
- apps.evozi.com
- cafebazaar.ir
+ google.play.com<br>
+ apps.evozi.com<br>
+ cafebazaar.ir<br>
