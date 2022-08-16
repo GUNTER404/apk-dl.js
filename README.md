@@ -9,16 +9,20 @@
 
 ### insatall
 ```bash
-npm install apk-dl
+> npm install apk-dl
+```
 or
-npm install git+https://github.com/GUNTER404/apk-dl.git
+```bash
+> npm install git+https://github.com/GUNTER404/apk-dl.git
 ```
 
 ### uninstall
 ```bash
-npm uninstall apk-dl
+> npm uninstall apk-dl
+```
 or
-npm uninstall git+https://github.com/GUNTER404/apk-dl.git
+```bash
+> npm uninstall git+https://github.com/GUNTER404/apk-dl.git
 ```
 # how to use
 
