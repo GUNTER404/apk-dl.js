@@ -1,6 +1,6 @@
 {
   "name": "apk-dl",
-  "version": "1.0.4",
+  "version": "1.2.1",
   "description": "this mudule make to download apps from:\n apk-dl.com\n aptoide.com\n apkcombo.com\n play.google.com",
   "type": "module",
   "main": "index.js",

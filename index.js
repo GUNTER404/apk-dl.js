@@ -11,6 +11,7 @@ import tools from './config.js'
 let apkcombo = {
   search: async function(args) {
     let res = (await fetch(tools.Proxy(tools.api(1, '/search/' + encodeURIComponent(args.replace(' ', '-'))))))
+    let ress = []
     res = (await res.text())
     let $ = cheerio.load(res)
     let link = []
@@ -20,10 +21,10 @@ let apkcombo = {
       name.push(nem)
       link.push($(b).attr('href').replace('https://apkcombo-com.translate.goog/', 'https://apkcombo.com/').replace('/?_x_tr_sl=en&_x_tr_tl=fr&_x_tr_hl=en&_x_tr_pto=wapp', ''))
     })
-    return {
-      link,
-      name
+    for(i=(name.length||link.length);i<(name.length||link.length);i++){
+      ress.push({name:name[i],link:link[i]})
     }
+    return ress
   },
   download: async function(url) {
     let res = (await fetch(url))
@@ -62,10 +63,10 @@ let apkdl = {
       name.push(nem)
       link.push($(b).attr('href').replace('https://apk--dl-com.translate.goog/','https://apk-dl.com/').replace('?_x_tr_sl=en&_x_tr_tl=fr&_x_tr_hl=en&_x_tr_pto=wapp',''))
     })
-    return {
-      link,
-      name
+    for(i=(name.length||link.length);i<(name.length||link.length);i++){
+      ress.push({name:name[i],link:link[i]})
     }
+    return ress
   },
   download: async function(url) {
     let res = (await fetch(tools.Proxy(url)))
