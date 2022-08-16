@@ -10,11 +10,15 @@
 ### insatall
 ```sh
 npm install apk-dl
+or
+npm install git+https://github.com/GUNTER404/apk-dl.git
 ```
 
 ### uninstall
 ```sh
 npm uninstall apk-dl
+or
+npm uninstall git+https://github.com/GUNTER404/apk-dl.git
 ```
 # how to use
 
@@ -47,3 +51,7 @@ await apk_dl.apkcombo.search("url from apkcombo.com")
 await apk_dl.aptoide.search('minecraft')
 await apk_dl.aptoide.search("app name package")
 ```
+#### comming soon
+ google.play.com
+ apps.evozi.com
+ cafebazaar.ir
