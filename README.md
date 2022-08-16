@@ -8,14 +8,14 @@
 # how to install/uninstall
 
 ### insatall
-```sh
+```bash
 npm install apk-dl
 or
 npm install git+https://github.com/GUNTER404/apk-dl.git
 ```
 
 ### uninstall
-```sh
+```bash
 npm uninstall apk-dl
 or
 npm uninstall git+https://github.com/GUNTER404/apk-dl.git
