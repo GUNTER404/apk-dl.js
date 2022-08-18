@@ -1,4 +1,4 @@
-# apk-dl
+# apk-dl.js
 ## this mudule make to download apps from:
 [apk-dl.com](apk-dl.com)<br>
 [aptoide.com](aptoide.com)<br>
@@ -9,32 +9,29 @@
 
 ### insatall
 ```bash
-> npm install apk-dl
+> npm install apk-dl.js
 ```
 or
 ```bash
-> npm install git+https://github.com/GUNTER404/apk-dl.git
+> npm install git+https://github.com/GUNTER404/apk-dl.js.git
 ```
 
 ### uninstall
 ```bash
-> npm uninstall apk-dl
+> npm uninstall apk-dl.js
 ```
 or
 ```bash
-> npm uninstall git+https://github.com/GUNTER404/apk-dl.git
+> npm uninstall git+https://github.com/GUNTER404/apk-dl.js.git
 ```
 # how to use
 
 ## import
 #### whit js core
 ```js
-const apk_dl = require('apk-dl');
-```
-
-#### whit ES6 
-```js
-import apk_dl from 'apk-dl'
+const apk_dl = require('apk-dl.js');
+//or
+import apk_dl from 'apk-dl.js'
 ```
 
 ## search and download
